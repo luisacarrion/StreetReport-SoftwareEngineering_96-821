@@ -9,7 +9,8 @@ class ReportsController < ApplicationController
     if params[:user_id]
       @reports = User.find(params[:user_id]).reports
     else
-      @reports = Report.all
+      #@reports = Report.all
+      @reports = Report.order("created_at DESC")
     end
 
     @filter = Filter.new(params)
@@ -95,7 +96,8 @@ class ReportsController < ApplicationController
   end
 
   def filter
-    @reports = Report.all
+    #@reports = Report.all
+    @reports = Report.order("created_at DESC")
 
     respond_to do |format|
       format.html # index.html.erb
