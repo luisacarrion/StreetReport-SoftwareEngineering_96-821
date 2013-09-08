@@ -8,11 +8,12 @@ StreetReport02::Application.routes.draw do
     resources :reports, shallow: true
   end
 
-  match '/reports' => 'reports#index', :as => 'user_reports'
+  #match '/reports' => 'reports#index', :as => 'user_reports'
 
 
   match '/reports/similar' => 'reports#similar', :as => 'similar_reports'
   #match '/reports/similar/:id)' => 'reports#similar', :as => 'similar_reports_report'
+
 
 
   resources :followers

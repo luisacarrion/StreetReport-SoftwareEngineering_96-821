@@ -1,4 +1,7 @@
 class ReportsController < ApplicationController
+
+  before_filter :authenticate_user!, :only => [:edit, :update, :destroy]
+
   # GET /reports
   # GET /reports.json
   def index
@@ -112,5 +115,13 @@ class ReportsController < ApplicationController
     end
   end
 
+  def self.can_edit(user_id, user_signed_in, current_user)
+
+    return false unless user_signed_in
+
+    if current_user.id == user_id
+      return true
+    end
+  end
 
 end
