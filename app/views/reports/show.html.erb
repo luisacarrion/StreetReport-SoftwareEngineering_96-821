@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date created:</b>
+  <%= @report.date_created %>
+</p>
+
+<p>
+  <b>Date updated:</b>
+  <%= @report.date_updated %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @report.description %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @report.location %>
+</p>
+
+<p>
+  <b>Troubles caused:</b>
+  <%= @report.troubles_caused %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @report.user_id %>
+</p>
+
+<p>
+  <b>Institution:</b>
+  <%= @report.institution_id %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @report.status_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_report_path(@report) %> |
+<%= link_to 'Back', reports_path %>

@@ -1,4 +1,31 @@
 StreetReport02::Application.routes.draw do
+  resources :reports_users
+
+
+  resources :statuses
+
+
+  resources :report_users
+
+
+  resources :comments
+
+
+  resources :pictures
+
+
+  resources :reports
+
+
+  resources :institutions
+
+
+  resources :officers
+
+
+  resources :users
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
