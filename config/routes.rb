@@ -1,4 +1,7 @@
 StreetReport02::Application.routes.draw do
+  resources :followers
+
+
   resources :reports_users
 
 
