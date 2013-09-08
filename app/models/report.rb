@@ -7,5 +7,5 @@ class Report < ActiveRecord::Base
   has_many :pictures
   has_many :comments
   has_many :followers
-  has_many :user, through: :followers
+  #has_many :user, through: :followers
 end

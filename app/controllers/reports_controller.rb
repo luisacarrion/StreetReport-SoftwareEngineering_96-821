@@ -2,8 +2,16 @@ class ReportsController < ApplicationController
   # GET /reports
   # GET /reports.json
   def index
-    @reports = Report.all
+
+    if params[:user_id]
+      @reports = User.find(params[:user_id]).reports
+    else
+      @reports = Report.all
+    end
+
     @filter = Filter.new(params)
+
+
 
     respond_to do |format|
       format.html # index.html.erb
@@ -103,4 +111,6 @@ class ReportsController < ApplicationController
       format.json { render json: @report }
     end
   end
+
+
 end

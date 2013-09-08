@@ -2,7 +2,9 @@
 
 <div id="menu" class="menu">
 
-  <p> Menu here! </p>
+  <% if current_user %>
+    <%= link_to 'My Reports', user_reports_path(current_user.id) %>
+  <% end %>
 </div>
 
 
@@ -10,7 +12,7 @@
 
 <div id="content" class="content">
 
-  <a href="<%=new_report_path %>">
+  <a href="<%= new_report_path %>">
   <div id="new_report_button" >
     New Report
   </div>
@@ -41,7 +43,7 @@
         <td><%= report.description %></td>
         <td><%= report.location %></td>
         <td><%= report.troubles_caused %></td>
-        <td><%= report.user_id %></td>
+        <td><%= report.user.complete_name %></td>
         <td><%= report.institution_id %></td>
         <td><%= report.status_id %></td>
         <td><%= link_to 'Show', report %></td>

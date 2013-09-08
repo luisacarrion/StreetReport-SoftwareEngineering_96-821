@@ -33,21 +33,8 @@
   </div>
 
 
-  <div class="field">
-    <%= f.label :institution_id %><br />
-    <%= f.number_field :institution_id %>
-  </div>
-  <div class="field">
-    <%= f.label :status_id %><br />
-    <%= f.number_field :status_id %>
-  </div>
 
-  <% if @report.user_id && @report.user_id != "" %>
-        <p>
-          <b>User:</b>
-          <%= @report.user.complete_name %>
-        </p>
-  <% end %>
+
 
   <div class="actions">
     <%= f.submit %>
