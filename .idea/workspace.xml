@@ -4,12 +4,12 @@
     <list default="true" id="bce044fe-5de6-44e9-9921-0e08dcae64b1" name="Default" comment="">
       <change type="DELETED" beforePath="C:\Users\MariaLuisa\Desktop\git\StreetReport03\db\migrate\20130908013701_create_users.rb" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\MariaLuisa\Desktop\git\StreetReport03\public\index.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/reports_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/reports_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="StreetReport02.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="bce044fe-5de6-44e9-9921-0e08dcae64b1" time="1378681721174" ignored="false" />
+    <file path="/Dummy.txt" changelist="bce044fe-5de6-44e9-9921-0e08dcae64b1" time="1378683018755" ignored="false" />
     <file path="/20130908014233_create_report_users.rb" changelist="bce044fe-5de6-44e9-9921-0e08dcae64b1" time="1378604968528" ignored="false" />
     <file path="/create_reports_users.rb" changelist="bce044fe-5de6-44e9-9921-0e08dcae64b1" time="1378605948622" ignored="false" />
     <file path="/user.rb" changelist="bce044fe-5de6-44e9-9921-0e08dcae64b1" time="1378661349631" ignored="false" />
@@ -21,7 +21,7 @@
     <file path="/comment.rb" changelist="bce044fe-5de6-44e9-9921-0e08dcae64b1" time="1378607892351" ignored="false" />
     <file path="/follower.rb" changelist="bce044fe-5de6-44e9-9921-0e08dcae64b1" time="1378607941327" ignored="false" />
     <file path="/routes.rb" changelist="bce044fe-5de6-44e9-9921-0e08dcae64b1" time="1378670833467" ignored="false" />
-    <file path="/application.html.erb" changelist="bce044fe-5de6-44e9-9921-0e08dcae64b1" time="1378681105025" ignored="false" />
+    <file path="/application.html.erb" changelist="bce044fe-5de6-44e9-9921-0e08dcae64b1" time="1378683044711" ignored="false" />
     <file path="/users_controller.rb" changelist="bce044fe-5de6-44e9-9921-0e08dcae64b1" time="1378666600593" ignored="false" />
     <file path="/index.html.erb" changelist="bce044fe-5de6-44e9-9921-0e08dcae64b1" time="1378679793123" ignored="false" />
     <file path="/reports_controller.rb" changelist="bce044fe-5de6-44e9-9921-0e08dcae64b1" time="1378682433196" ignored="false" />
@@ -59,16 +59,25 @@
       <file leaf-file-name="_form_new.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/reports/_form_new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="46" selection-start="488" selection-end="488" vertical-scroll-proportion="-10.258064">
+            <state line="18" column="46" selection-start="488" selection-end="488" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reports_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="reports_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="59" selection-start="2490" selection-end="2496" vertical-scroll-proportion="0.6365741">
+            <state line="96" column="68" selection-start="2313" selection-end="2313" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="70" selection-start="981" selection-end="981" vertical-scroll-proportion="0.42256904">
               <folding />
             </state>
           </provider>
@@ -105,9 +114,9 @@
         <option value="$PROJECT_DIR$/app/views/reports/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/reports/show.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/reports/_form_new.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/reports_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       </list>
     </option>
   </component>
@@ -143,6 +152,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -369,21 +380,19 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.File Status" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.File Status" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -685,13 +694,13 @@
       <method />
     </configuration>
     <list size="7">
-      <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="1" class="java.lang.String" itemvalue="Rake.routes" />
-      <item index="2" class="java.lang.String" itemvalue="IRB console.Rails console: StreetReport02" />
-      <item index="3" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="5" class="java.lang.String" itemvalue="Rails.Production: StreetReport02" />
-      <item index="6" class="java.lang.String" itemvalue="Rails.Development: StreetReport02" />
+      <item index="0" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="2" class="java.lang.String" itemvalue="Rails.Production: StreetReport02" />
+      <item index="3" class="java.lang.String" itemvalue="Rails.Development: StreetReport02" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.db:migrate" />
+      <item index="5" class="java.lang.String" itemvalue="Rake.routes" />
+      <item index="6" class="java.lang.String" itemvalue="IRB console.Rails console: StreetReport02" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -731,14 +740,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2008547" sideWeight="0.8410596" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20299146" sideWeight="0.8410596" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25320512" sideWeight="0.42762432" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -844,13 +853,13 @@
           <ID>RailsDependency</ID>
           <OriginalElement>#StreetReport02</OriginalElement>
           <nodes>
-            <node x="" y="">Picture</node>
             <node x="" y="">User</node>
+            <node x="" y="">Picture</node>
             <node x="" y="">Status</node>
-            <node x="" y="">Report</node>
             <node x="" y="">Comment</node>
-            <node x="" y="">Officer</node>
+            <node x="" y="">Report</node>
             <node x="" y="">Follower</node>
+            <node x="" y="">Officer</node>
             <node x="" y="">Institution</node>
           </nodes>
           <notes />
@@ -907,21 +916,23 @@
         <state line="137" column="28" selection-start="2443" selection-end="2443" vertical-scroll-proportion="0.7491448" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="104" selection-start="1828" selection-end="1828" vertical-scroll-proportion="0.7887155" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/reports/_form_new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="46" selection-start="488" selection-end="488" vertical-scroll-proportion="-10.258064">
+        <state line="18" column="46" selection-start="488" selection-end="488" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="59" selection-start="2490" selection-end="2496" vertical-scroll-proportion="0.6365741">
+        <state line="96" column="68" selection-start="2313" selection-end="2313" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="70" selection-start="981" selection-end="981" vertical-scroll-proportion="0.42256904">
           <folding />
         </state>
       </provider>
