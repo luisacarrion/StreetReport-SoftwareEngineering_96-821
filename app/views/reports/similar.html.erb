@@ -1,0 +1,12 @@
+<h1>Similar Reports</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', reports_path %>
+
+<div id="suggested_reports">
+  <form  method="GET">
+    <!-- This should be ajax -->
+    <input type="submit" action="/similar" value="Look for Similar Reports"   >
+  </form>
+</div>

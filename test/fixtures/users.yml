@@ -3,11 +3,9 @@
 one:
   username: MyString
   complete_name: MyString
-  email: MyString
   phone: MyString
 
 two:
   username: MyString
   complete_name: MyString
-  email: MyString
   phone: MyString

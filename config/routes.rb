@@ -1,14 +1,29 @@
 StreetReport02::Application.routes.draw do
+
+  devise_for :users, :controllers => {:sessions => "devise/sessions", :registrations => "users"}
+  resources :users, :controller => "users"
+
+
+  #resources :users
+
+  #devise_for :users do
+  #  match "/users/sign_out" => "devise/sessions#destroy", :as => :destroy_user_session
+  #end
+
+  #match "/users/sign_out" => "devise/sessions#destroy"
+
+
+  root :to => "reports#index"
+
+
+
+  match '/reports/similar' => 'reports#similar', :as => 'similar_reports'
+  #match '/reports/similar/:id)' => 'reports#similar', :as => 'similar_reports_report'
+
   resources :followers
 
 
-  resources :reports_users
-
-
   resources :statuses
-
-
-  resources :report_users
 
 
   resources :comments
@@ -26,7 +41,10 @@ StreetReport02::Application.routes.draw do
   resources :officers
 
 
-  resources :users
+
+
+
+
 
 
   # The priority is based upon order of creation:

@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>StreetReport02</title>
+  <title>Street Report</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+
+  <div class="page_title" >
+    <%= link_to "Street Report", root_path %>
+  </div>
+
+  <div id="login">
+    <%= link_to "Login", new_user_session_path unless user_signed_in? %>
+
+    <% if user_signed_in?%>
+        <%= current_user.email %>   <br>
+        <%= link_to("Logout", destroy_user_session_path, :method => :delete) %>
+
+    <% end  %>
+</div>
+
+<div class="after_header">
+  <p class="notice"><%= notice %></p>
+</div>
+
+
 
 <%= yield %>
 

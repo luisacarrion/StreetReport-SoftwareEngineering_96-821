@@ -3,6 +3,7 @@ class ReportsController < ApplicationController
   # GET /reports.json
   def index
     @reports = Report.all
+    @filter = Filter.new(params)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -41,6 +42,7 @@ class ReportsController < ApplicationController
   # POST /reports.json
   def create
     @report = Report.new(params[:report])
+    @report.user_id = current_user.id
 
     respond_to do |format|
       if @report.save
@@ -78,6 +80,27 @@ class ReportsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to reports_url }
       format.json { head :no_content }
+    end
+  end
+
+  def filter
+    @reports = Report.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @reports }
+    end
+
+    render :action => 'index'
+  end
+
+  def similar
+    @report = Report.new(params[:report])
+    @report.description = params[:description]
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @report }
     end
   end
 end
