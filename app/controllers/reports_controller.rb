@@ -47,7 +47,11 @@ class ReportsController < ApplicationController
 
   # GET /reports/1/edit
   def edit
+
     @report = Report.find(params[:id])
+
+     redirect_to root_path, notice: "Sorry, you can't edit this report." unless ReportsController.can_edit(@report.user_id, user_signed_in?, current_user)
+
   end
 
   # POST /reports
@@ -96,6 +100,8 @@ class ReportsController < ApplicationController
   def destroy
     @report = Report.find(params[:id])
     @report.destroy
+
+    redirect_to root_path, notice: "Sorry, you can't delete this report." unless ReportsController.can_edit(@report.user_id, user_signed_in?, current_user)
 
     respond_to do |format|
       format.html { redirect_to reports_url }
