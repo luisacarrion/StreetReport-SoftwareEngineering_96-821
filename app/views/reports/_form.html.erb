@@ -12,15 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :date_created %><br />
-    <%= f.datetime_select :date_created %>
-  </div>
-  <div class="field">
-    <%= f.label :date_updated %><br />
-    <%= f.datetime_select :date_updated %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
+    <%= f.label 'What I saw' %><br />
     <%= f.text_area :description %>
   </div>
   <div class="field">
@@ -45,7 +37,7 @@
   <% if @report.user_id && @report.user_id != "" %>
         <p>
           <b>User:</b>
-          <%= @report.user.complete_name %>
+          <%= ReportsController.author(@report) %>
         </p>
   <% end %>
 

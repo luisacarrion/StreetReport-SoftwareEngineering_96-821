@@ -54,7 +54,13 @@ class ReportsController < ApplicationController
   # POST /reports.json
   def create
     @report = Report.new(params[:report])
-    @report.user_id = current_user.id
+
+    if user_signed_in?
+      @report.user_id = current_user.id
+    else
+      @report.user_id = nil
+    end
+
     @report.date_created = Time.now
     @report.date_updated = Time.now
 
@@ -123,9 +129,16 @@ class ReportsController < ApplicationController
 
     return false unless user_signed_in
 
-    if current_user.id == user_id
+    if current_user.id == user_id || current_user.email == "admin@admin.com"
       return true
     end
+  end
+
+  def self.author(report)
+
+    return "Anonymous" unless report.user_id != nil
+
+    report.user.complete_name
   end
 
 end

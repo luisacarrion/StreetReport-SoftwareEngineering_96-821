@@ -49,7 +49,7 @@ a, a:visited{
 .page_title a:hover, .page_title a:visited:hover{
     text-decoration: none;
     background-color: transparent;
-    color: white;
+    color: gray;
 }
 
 #login {
@@ -66,7 +66,7 @@ a, a:visited{
       text-align: center;
   }
 
-.content a, .content a:visited {
+.content a, .content a:visited{
     text-decoration: none;
     background-color: transparent;
     color: white;
@@ -90,7 +90,29 @@ a, a:visited{
     width: 15%;
     padding: 0 5px 0 5px;
     min-height:100px;
+    font-weight: bold;
 }
+
+
+.menu a, .menu a:visited, #login a, #login a:visited{
+    text-decoration: none;
+
+    width: 100px;
+
+    color: gray;
+}
+
+.menu a:hover, .menu a:visited:hover, #login a:hover, #login a:visited:hover {
+    text-decoration: none;
+    background-color: transparent;
+
+    color: #3d9bc8;
+}
+
+#login {
+    text-align: right;
+}
+
 
 .content {
     width: 60%;
@@ -105,6 +127,16 @@ a, a:visited{
     padding: 0 5px 0 5px;
 }
 
+.after_content {
+    clear:both;
+}
+.footer {
+    background-color: #3d9bc8;
+    border-radius: 10px;
+    color: white;
+    margin-top: 30px;
+    padding: 15px 30px 30px 30px;
+}
 
 
 

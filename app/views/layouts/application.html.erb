@@ -17,7 +17,7 @@
     <%= link_to "Login", new_user_session_path unless user_signed_in? %>
 
     <% if user_signed_in?%>
-        <%= current_user.email %>   <br>
+        <%= "Hi, #{current_user.complete_name}" %>   <br>
         <%= link_to("Logout", destroy_user_session_path, :method => :get) %>
 
     <% end  %>
@@ -30,6 +30,41 @@
 
 
 <%= yield %>
+
+  <div class="after_content">
+    </div>
+<div class="footer">
+  <p>
+    <b>Student:</b> Maria Luisa Carrion | 96-821 Introduction to Software Engineering | Task 2: Learning Rails
+
+
+  </p>
+
+  <b>User Stories implemented:</b>
+
+
+    <p>As a citizen, I can create a new report anonymously (I don’t have to be logged in).
+
+    <p>
+      As a citizen, I can sign up and login.
+    </p>
+
+    <p>As a citizen, I can create a new report by filling in any of the following fields: <del>pictures (a maximum of 3)</del>, what I saw, location <del>(I want to choose this form a google map)</del>, troubles caused by what I am reporting.</p>
+
+    <p>As a citizen, I can see the reports I have created clicking on the "My Reports" link.</p>
+
+    <p>As a citizen, I can only edit and destroy the reports that I have created.</p>
+
+    <p>As a citizen, I can see the following information when I open a report: <del>pictures,</del> what the reporter saw, location, troubles caused by what was reported, status of the report, responsible institution, comments.
+    </p>
+
+    <p>
+       As admin, I can edit and destroy all the reports. <b>user:</b> admin  <b>Password:</b> admin12345
+    </p>
+
+
+
+</div>
 
 </body>
 </html>

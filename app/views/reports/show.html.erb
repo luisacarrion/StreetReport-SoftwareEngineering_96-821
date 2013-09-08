@@ -37,7 +37,7 @@
 
 <p>
   <b>User:</b>
-  <%= @report.user.complete_name %>
+  <%= ReportsController.author(@report)  %>
 </p>
 
 <%= link_to 'Edit', edit_report_path(@report) %> |
