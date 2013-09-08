@@ -2,3 +2,101 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+#filter {
+  display: none;
+}
+
+#new_report_button {
+  background-color: #3d9bc8;
+  border-radius: 10px;
+
+  text-align: center;
+  font-size: 24px;
+  padding: 15px 0 15px 0;
+}
+
+#new_report_button:hover {
+  background-color: #328ab3;
+}
+
+.report {
+  margin: 5px 5px 30px 5px;
+  padding: 5px 15px 10px 15px;
+  //height: 200px;
+  //background-color: lightblue;
+  border-color: #3d9bc8;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+
+
+}
+
+
+
+.location{
+  float:left;
+  padding: 5px 5px 5px 5px;
+  width: 20%;
+
+}
+
+.institution{
+  float:left;
+  //padding: 5px 5px 5px 5px;
+}
+
+.reporter{
+  float:right;
+
+}
+
+.description {
+  float: right;
+  width: 75%;
+  padding: 5px 5px 5px 5px;
+}
+
+ .updated {
+  float: right;
+}
+
+.status,{
+  clear: both;
+  padding: 0 5px 0 5px;
+}
+
+.actions {
+  clear: both;
+}
+
+.actions a, .actions a:visited {
+  border-color: #3d9bc8;
+  border-style: solid;
+  border-width: 1px;
+  color: #3d9bc8;
+}
+
+.actions a:hover, .actions a:visited:hover {
+  //color: white;
+  //background-color: #3d9bc8;
+  border-color: gray;
+  border-style: solid;
+  border-width: 1px;
+  color: gray;
+}
+
+.show, .edit, .destroy{
+  float:left;
+  margin: 0 5px 0 5px;
+  padding: 0 5px 0 5px;
+  background-color: lightskyblue;
+  color: white;
+  border-radius: 5px;
+}
+
+.report_footer {
+  clear: both;
+
+}

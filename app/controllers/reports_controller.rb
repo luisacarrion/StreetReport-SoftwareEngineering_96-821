@@ -7,7 +7,7 @@ class ReportsController < ApplicationController
   def index
 
     if params[:user_id]
-      @reports = User.find(params[:user_id]).reports
+      @reports = User.find(params[:user_id]).reports.order("created_at DESC")
     else
       #@reports = Report.all
       @reports = Report.order("created_at DESC")
@@ -55,6 +55,8 @@ class ReportsController < ApplicationController
   def create
     @report = Report.new(params[:report])
     @report.user_id = current_user.id
+    @report.date_created = Time.now
+    @report.date_updated = Time.now
 
     respond_to do |format|
       if @report.save

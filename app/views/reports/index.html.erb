@@ -23,40 +23,79 @@
 
 
 
-    <table>
-      <tr>
-        <th>Date created</th>
-        <th>Date updated</th>
-        <th>Description</th>
-        <th>Location</th>
-        <th>Troubles caused</th>
-        <th>User</th>
-        <th>Institution</th>
-        <th>Status</th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
+      <% @reports.each do |report| %>
+          <div id="<%= "report_#{report.id}"%> " class="report">
 
-    <% @reports.each do |report| %>
-      <tr>
-        <td><%= report.date_created %></td>
-        <td><%= report.date_updated %></td>
-        <td><%= report.description %></td>
-        <td><%= report.location %></td>
-        <td><%= report.troubles_caused %></td>
-        <td><%= report.user.complete_name %></td>
-        <td><%= report.institution_id %></td>
-        <td><%= report.status_id %></td>
-        <td><%= link_to 'Show', report %></td>
+            <div id="<%="location_#{report.id}"%>" class="location">
+              <b>Location</b>
+              <br>
+              <%= report.location %>
+            </div>
 
-        <% if ReportsController.can_edit(report.user_id, user_signed_in?, current_user)%>
-            <td><%= link_to 'Edit', edit_report_path(report) %></td>
-            <td><%= link_to 'Destroy', report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
-    <% end %>
-    </table>
+            <div id="description_#{report.id}" class="description">
+              <b>What the Reporter Saw</b>
+              <br>
+              <%= report.description %>
+            </div>
+
+
+
+            <div id="status_#{report.id}" class="status">
+
+              <%= report.status_id %>
+            </div>
+
+
+
+
+            <div id="institution_#{report.id}" class="institution">
+
+
+              <%= report.institution_id %>
+            </div>
+
+            <div id="reporter_#{report.id}" class="reporter">
+              By
+
+              <%= report.user.complete_name %>
+            </div>
+
+
+
+
+
+            <div id="actions_#{report.id}" class="actions">
+          <%= link_to 'Show', report, :class => "show" %>
+
+
+          <% if ReportsController.can_edit(report.user_id, user_signed_in?, current_user)%>
+
+              <%= link_to 'Edit', edit_report_path(report), :class => "edit" %>
+
+
+              <%= link_to 'Destroy', report, method: :delete, data: { confirm: 'Are you sure?' }, :class => "destroy" %>
+
+          <% end %>
+
+              <div id="updated_#{report.id}" class="updated">
+                <%= report.date_updated.to_date %>
+              </div>
+            </div>
+
+            <div class="report_footer">
+
+            </div>
+          </div>
+
+
+
+
+      <% end %>
+
+
+
+
+
 
     <br />
 

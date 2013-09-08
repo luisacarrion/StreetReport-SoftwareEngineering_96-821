@@ -19,31 +19,17 @@ body {
     padding: 25px 0 25px 0;
 }
 
- a{
-    text-decoration: none;
-    color: black;
-
-}
-
- a:hover{
-    text-decoration: none;
-    background-color: transparent;
-    color: dimgray;
-}
-
- a:visited{
+a, a:visited{
     text-decoration: none;
     background-color: transparent;
     color: black;
 }
 
- a:visited:hover{
+ a:hover,  a:visited:hover{
     text-decoration: none;
     background-color: transparent;
-    color: dimgray;
+    color: white;
 }
-
-
 
 
 .page_title {
@@ -54,28 +40,16 @@ body {
     width: 70%;
     float: left;
 }
-.page_title a{
-    text-decoration: none;
-    color: black;
-
-}
-
-.page_title a:hover{
-    text-decoration: none;
-    background-color: transparent;
-    color: dimgray;
-}
-
-.page_title a:visited{
+.page_title a, .page_title a:visited{
     text-decoration: none;
     background-color: transparent;
     color: black;
 }
 
-.page_title a:visited:hover{
+.page_title a:hover, .page_title a:visited:hover{
     text-decoration: none;
     background-color: transparent;
-    color: dimgray;
+    color: white;
 }
 
 #login {
@@ -92,27 +66,16 @@ body {
       text-align: center;
   }
 
-.content a {
-    text-decoration: none;
-    color: black;
-}
-
-.content a:hover {
+.content a, .content a:visited {
     text-decoration: none;
     background-color: transparent;
-    color: dimgray;
+    color: white;
 }
 
-.content a:visited {
+.content a:hover, .content a:visited:hover {
     text-decoration: none;
     background-color: transparent;
-    color: black;
-}
-
-.content a:visited:hover {
-    text-decoration: none;
-    background-color: transparent;
-    color: dimgray;
+    color: white;
 }
 
 .section_title {
@@ -143,16 +106,5 @@ body {
 }
 
 
-#new_report_button {
-    background-color: mediumseagreen;
-    border-radius: 10px;
 
-    text-align: center;
-    font-size: 24px;
-    padding: 15px 0 15px 0;
-}
-
-#new_report_button:hover {
-    background-color: darkseagreen;
-}
 
