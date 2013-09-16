@@ -1,4 +1,8 @@
 ENV["RAILS_ENV"] = "test"
+
+require 'minitest/reporters'
+MiniTest::Reporters.use!
+
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 

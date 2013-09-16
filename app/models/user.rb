@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   attr_accessible :complete_name, :phone, :username
 
+  validates :complete_name, :email, :password, presence: true
+
   has_many :reports
   has_many :officers
   has_many :institutions, through: :officers

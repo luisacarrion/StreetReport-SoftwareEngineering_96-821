@@ -4,10 +4,12 @@
   <title>Street Report</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+
   <%= csrf_meta_tags %>
+
+
 </head>
 <body>
-
 
   <div class="page_title" >
     <%= link_to "Street Report", root_path %>
@@ -40,7 +42,35 @@
 
   </p>
 
-  <b>User Stories implemented:</b>
+  <br>
+  <br>
+
+  <b>User Stories implemented for Task 3:</b>
+
+  <p>
+    As a citizen, I can filter the reports entering a keyword in a search field. This keyword can match anything in the report description or report location.
+  </p>
+
+
+  <b>REST API that responds to xml requests for Task 3:</b>
+
+  <p>
+    http://localhost:3000/reports.xml
+  </p>
+
+  <p>
+    http://localhost:3000/reports/new.xml
+  </p>
+
+  <p>
+    http://localhost:3000/reports/5.xml
+  </p>
+
+
+  <br>
+  <br>
+
+  <b>User Stories implemented for Task 2:</b>
 
 
     <p>As a citizen, I can create a new report anonymously (I don’t have to be logged in).

@@ -1,6 +1,11 @@
+
+require 'reports_helper.rb'
+
 class ReportsController < ApplicationController
 
   before_filter :authenticate_user!, :only => [:edit, :update, :destroy]
+
+  helper_method :can_edit
 
   # GET /reports
   # GET /reports.json
@@ -9,17 +14,15 @@ class ReportsController < ApplicationController
     if params[:user_id]
       @reports = User.find(params[:user_id]).reports.order("created_at DESC")
     else
-      #@reports = Report.all
+
       @reports = Report.order("created_at DESC")
     end
-
-    @filter = Filter.new(params)
-
 
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @reports }
+      format.xml { render xml: @reports }
     end
   end
 
@@ -31,6 +34,7 @@ class ReportsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @report }
+      format.xml { render xml: @report }
     end
   end
 
@@ -38,10 +42,12 @@ class ReportsController < ApplicationController
   # GET /reports/new.json
   def new
     @report = Report.new
+    @reports = Report.all
 
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @report }
+      format.xml { render xml: @report }
     end
   end
 
@@ -50,7 +56,7 @@ class ReportsController < ApplicationController
 
     @report = Report.find(params[:id])
 
-     redirect_to root_path, notice: "Sorry, you can't edit this report." unless ReportsController.can_edit(@report.user_id, user_signed_in?, current_user)
+     redirect_to root_path, notice: "Sorry, you can't edit this report." unless can_edit(@report.user_id, user_signed_in?, current_user)
 
   end
 
@@ -70,11 +76,14 @@ class ReportsController < ApplicationController
 
     respond_to do |format|
       if @report.save
-        format.html { redirect_to @report, notice: 'Report was successfully created.' }
+        #format.html { redirect_to @report, notice: 'Report was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Report was successfully created.' }
         format.json { render json: @report, status: :created, location: @report }
+        format.xml { render xml: @report, status: :created, location: @report }
       else
         format.html { render action: "new" }
         format.json { render json: @report.errors, status: :unprocessable_entity }
+        format.xml { render xml: @report.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -88,9 +97,11 @@ class ReportsController < ApplicationController
       if @report.update_attributes(params[:report])
         format.html { redirect_to @report, notice: 'Report was successfully updated.' }
         format.json { head :no_content }
+        format.xml { head :no_content }
       else
         format.html { render action: "edit" }
         format.json { render json: @report.errors, status: :unprocessable_entity }
+        format.xml { render xml: @report.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -101,7 +112,7 @@ class ReportsController < ApplicationController
     @report = Report.find(params[:id])
     @report.destroy
 
-    redirect_to root_path, notice: "Sorry, you can't delete this report." unless ReportsController.can_edit(@report.user_id, user_signed_in?, current_user)
+    redirect_to root_path, notice: "Sorry, you can't delete this report." unless can_edit(@report.user_id, user_signed_in?, current_user)
 
     respond_to do |format|
       format.html { redirect_to reports_url }
@@ -110,28 +121,19 @@ class ReportsController < ApplicationController
   end
 
   def filter
-    #@reports = Report.all
-    @reports = Report.order("created_at DESC")
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @reports }
-    end
+    @reports = Report.where("description like ? OR location like ?", "%#{params[:filter][:search]}%", "%#{params[:filter][:search]}%").order("created_at DESC")
 
-    render :action => 'index'
+
+    render 'index'
+
+
   end
 
-  def similar
-    @report = Report.new(params[:report])
-    @report.description = params[:description]
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @report }
-    end
-  end
 
-  def self.can_edit(user_id, user_signed_in, current_user)
+  #private
+  def can_edit(user_id, user_signed_in, current_user)
 
     return false unless user_signed_in
 
@@ -140,11 +142,14 @@ class ReportsController < ApplicationController
     end
   end
 
+
   def self.author(report)
 
     return "Anonymous" unless report.user_id != nil
 
     report.user.complete_name
   end
+
+
 
 end

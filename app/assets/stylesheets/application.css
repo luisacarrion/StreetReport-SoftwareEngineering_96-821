@@ -31,6 +31,9 @@ a, a:visited{
     color: white;
 }
 
+ .notice {
+     color: #3d9bc8;
+ }
 
 .page_title {
     font-size: 36px;
@@ -121,11 +124,25 @@ a, a:visited{
 
 }
 
+.content-thin {
+    width: 40%;
+    float: left;
+    padding: 0 10px 0 10px;
+
+}
+
 .sidebar {
     float: right;
     width: 20%;
     padding: 0 5px 0 5px;
 }
+
+.sidebar-wide {
+    float: right;
+    width: 40%;
+    padding: 0 5px 0 5px;
+}
+
 
 .after_content {
     clear:both;

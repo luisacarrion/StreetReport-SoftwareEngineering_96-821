@@ -23,74 +23,7 @@
 
 
 
-      <% @reports.each do |report| %>
-          <div id="<%= "report_#{report.id}"%> " class="report">
-
-            <div id="<%="location_#{report.id}"%>" class="location">
-              <b>Location</b>
-              <br>
-              <%= report.location %>
-            </div>
-
-            <div id="description_#{report.id}" class="description">
-              <b>What the Reporter Saw</b>
-              <br>
-              <%= report.description %>
-            </div>
-
-
-
-            <div id="status_#{report.id}" class="status">
-
-              <%= report.status_id %>
-            </div>
-
-
-
-
-            <div id="institution_#{report.id}" class="institution">
-
-
-              <%= report.institution_id %>
-            </div>
-
-            <div id="reporter_#{report.id}" class="reporter">
-              By
-
-              <%= ReportsController.author(report) %>
-            </div>
-
-
-
-
-
-            <div id="actions_#{report.id}" class="actions">
-          <%= link_to 'Show', report, :class => "show" %>
-
-
-          <% if ReportsController.can_edit(report.user_id, user_signed_in?, current_user)%>
-
-              <%= link_to 'Edit', edit_report_path(report), :class => "edit" %>
-
-
-              <%= link_to 'Destroy', report, method: :delete, data: { confirm: 'Are you sure?' }, :class => "destroy" %>
-
-          <% end %>
-
-              <div id="updated_#{report.id}" class="updated">
-                <%= report.date_updated.to_date %>
-              </div>
-            </div>
-
-            <div class="report_footer">
-
-            </div>
-          </div>
-
-
-
-
-      <% end %>
+      <%= render 'list_of_reports' %>
 
 
 
@@ -101,28 +34,7 @@
 
 </div>
 
-<div id="filter" class="sidebar">
-  <div class="section_title">
-    Report Filter
-  </div>
-  <form method="GET">
-    <div class="field">
-      <label for="filter_keywords">Keywords</label>   <br />
-      <input type="text" id="filter_keywords" name="filter[keywords]" value=<%= @filter.keywords %>>
-    </div>
-    <div class="field">
-      <label for="filter_status">Status</label>   <br />
-      <input type="text" id="filter_status" name="filter[status]" value=<%= @filter.status %>>
-    </div>
-    <div class="field">
-      <label for="filter_accountable_institution">Accountable Institution</label>   <br />
-      <input type="text" id="filter_accountable_institution" name="filter[institution]" value=<%= @filter.institution %>>
-    </div>
-    <div class="field">
-      <label for="filter_date">Date</label>   <br />
-      <input type="text" id="filter_date">
-    </div>
+<div class="sidebar">
 
-    <input type="submit" action="/" value="Go!">
-  </form>
+  <%= render 'filter' %>
 </div>

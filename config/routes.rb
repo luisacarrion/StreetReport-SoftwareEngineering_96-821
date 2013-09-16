@@ -4,20 +4,15 @@ StreetReport02::Application.routes.draw do
 
   root :to => "reports#index"
 
+  resources :reports
+
   resources :users, :controller => "users" do
-   # resources :reports, shallow: true
+    resources :reports, shallow: true
   end
 
-  # I tried to use the nested routing in the block above, but it just kept understanding 'new' as a report id
-  match '/users/:user_id/reports' => "reports#index", :as => "user_reports"
 
-  #match '/reports' => 'reports#index', :as => 'user_reports'
+  match '/filter' => 'reports#filter', :as => 'filter'
 
-
-  match '/reports/similar' => 'reports#similar', :as => 'similar_reports'
-  #match '/reports/similar/:id)' => 'reports#similar', :as => 'similar_reports_report'
-
-  #match '/reports/new' => redirect('reports#new')
 
   resources :followers
 
@@ -29,9 +24,6 @@ StreetReport02::Application.routes.draw do
 
 
   resources :pictures
-
-
-  resources :reports
 
 
   resources :institutions
