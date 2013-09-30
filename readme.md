@@ -19,7 +19,7 @@ As a citizen, I can filter the reports entering a keyword in a search field. Thi
 
 
 REST API that responds to xml requests for Task 3:
-  -----------------------------------
+-----------------------------------
 
 http://localhost:3000/reports.xml
 
@@ -30,6 +30,8 @@ http://localhost:3000/reports/5.xml
 
 AJAX usage:
 ------------
+
+When a user is logged in, the "How many reports do I have" link does an AJAX query to the server and shows an alert indicating how many reports the user has created.
 
 TurboLinks gem installed.
 
