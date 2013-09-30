@@ -10,19 +10,7 @@
       <%= f.text_field :search %>
     </p>
 
-    <p>
-      <%= f.label :status %> <br>
-      <%= select_tag :status, options_from_collection_for_select(Status.all, :id, :status), {prompt: 'Select'} %>
-    </p>
 
-    <p>
-      <%= f.label :date %> <br>
-      <%= select_tag :date_created_updated, options_for_select([:updated, :created]) %>
-      <%= select_tag :date_before_after, options_for_select([:before, :after]) %>  <br>
-
-      <br>
-      <%= select_date Date.today, prefix: :selected_date %>
-    </p>
 
 
 

@@ -3,7 +3,9 @@
 <div id="menu" class="menu">
 
   <% if current_user %>
-    <%= link_to 'My Reports', user_reports_path(current_user.id) %>
+    <%= link_to 'My Reports', user_reports_path(current_user.id) %>    <br>   <br>
+    <%= link_to("How many reports do I have?", "/reportsCount/#{current_user.id}.json" , :method => :get, remote: true) %>
+    <label id="reportsCountLabel" />
   <% end %>
 </div>
 
@@ -11,6 +13,9 @@
 
 
 <div id="content" class="content">
+
+
+
 
   <a href="<%= new_report_path %>">
   <div id="new_report_button" >

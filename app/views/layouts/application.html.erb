@@ -7,6 +7,7 @@
 
   <%= csrf_meta_tags %>
 
+  <script type=”text/javascript” src=”http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js&#8221;> </script>
 
 </head>
 <body>
@@ -20,12 +21,13 @@
 
     <% if user_signed_in?%>
         <%= "Hi, #{current_user.complete_name}" %>   <br>
-        <%= link_to("Logout", destroy_user_session_path, :method => :get) %>
+        <%= link_to("Logout", destroy_user_session_path, :method => :get) %>    <br>
 
     <% end  %>
 </div>
 
 <div class="after_header">
+
   <p class="notice"><%= notice %></p>
 </div>
 
@@ -66,6 +68,15 @@
     http://localhost:3000/reports/5.xml
   </p>
 
+  <b>AJAX usage:</b>
+
+  <p>
+    When a user is logged in, the "How many reports do I have" link does an AJAX query to the server and shows an alert indicating how many reports the user has created.
+  </p>
+
+  <p>
+    TurboLinks gem installed.
+  </p>
 
   <br>
   <br>

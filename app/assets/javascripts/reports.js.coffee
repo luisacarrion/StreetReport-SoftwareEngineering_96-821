@@ -3,3 +3,13 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 
+$ -> $("a[data-remote]").on "ajax:success", (e, data, status, xhr) -> alert "You have created " + data  + " reports."
+
+
+
+
+
+
+
+
+

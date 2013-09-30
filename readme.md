@@ -1,4 +1,4 @@
-Task 2 - Learning Rails
+Task 3 - Preparation
 =======================
 
 **Student**: Maria Luisa Carrion
@@ -11,8 +11,33 @@ It is a web app for reporting street incidents found by citizens. Examples of st
 
 Only the basic functionality was implemented. The user stories implemented are listed on the bottom of the page. 
 
-User Stories implemented:
--------------------------
+
+User Stories implemented for Task 3:
+-----------------------------------
+
+As a citizen, I can filter the reports entering a keyword in a search field. This keyword can match anything in the report description or report location.
+
+
+REST API that responds to xml requests for Task 3:
+  -----------------------------------
+
+http://localhost:3000/reports.xml
+
+http://localhost:3000/reports/new.xml
+
+http://localhost:3000/reports/5.xml
+
+
+AJAX usage:
+------------
+
+TurboLinks gem installed.
+
+
+
+
+User Stories implemented for Task 2:
+-----------------------------------
 
 As a citizen, I can create a new report anonymously (I do not have to be logged in).
 

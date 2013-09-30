@@ -13,6 +13,7 @@ StreetReport02::Application.routes.draw do
 
   match '/filter' => 'reports#filter', :as => 'filter'
 
+  match '/reportsCount/:user_id(.:format)' => 'users#reportsCount', :as => 'reportsCount'
 
   resources :followers
 

@@ -87,5 +87,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def reportsCount
+    @reportsCount = User.find(params[:user_id]).reports.count
+
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.json { render :json => @reportsCount }
+    end
+  end
 
 end
